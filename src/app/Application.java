@@ -1,26 +1,24 @@
 package app;
 
+import java.util.ArrayList;
+
 public class Application {
 
     public static void main(String[] args) {
 
-        //  --------------------------------------------------        
-        //           __     _____ _____ ____  _____ 
-        //           \ \   / / _ \_   _|  _ \| ____|
-        //            \ \ / / | | || | | |_) |  _|  
-        //             \ V /| |_| || | |  _ <| |___ 
-        //              \_/__\___/_|_|_|_| \_\_____|
-        //                / ___/ _ \|  _ \| ____|   
-        //               | |  | | | | | | |  _|     
-        //               | |__| |_| | |_| | |___    
-        //                \____\___/|____/|_____|   
-        //                    |_ _/ ___|_ _|        
-        //                     | | |    | |         
-        //                     | | |___ | |         
-        //                    |___\____|___|        
-        //                                                  
-        //  ---------------------------------------------------
+        ArrayList<Personne> personnes = new ArrayList<>();
 
+        Personne personne1 = new Personne("Valentin", "Gremaud", "teste", 1784, 92);
+        Personne personne2 = new Personne("Michu", "Grem", "te", 1765, 45);
+        Personne personne3 = new Personne("Gui", "Gre", "testeeeee", 1829, 32);
+
+        personnes.add(personne3);
+        personnes.add(personne1);
+        personnes.add(personne2);
+
+        for (Personne personne : personnes) {
+            System.out.println(personne.getNom());
+        }
     }
 
 }
